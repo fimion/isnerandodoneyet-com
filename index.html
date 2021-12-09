@@ -5,32 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Is Nerando Done Yet?</title>
-    <style>
-        body, html{
-            padding:0;
-            margin:0;
-        }
-        *{box-sizing: border-box;}
-
-        body{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow:column nowrap;
-            min-height: 100vh;
-        }
-    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="flex min-h-screen justify-center items-center flex-col">
 
-<h1>Is Nerando Done Yet?</h1>
-<h2>NO.</h2>
-<div>
-    <h2>Stuff to do for 2022:</h2>
-    <ul>
-        <li>0/7 Talks</li>
-        <li>0/7 Completed Projects</li>
-        <li>0/7 Articles</li>
+<h1 class="text-3xl">Is Nerando Done Yet?</h1>
+<h2 class="text-5xl font-bold">NO.</h2>
+<div class="mt-10 text-2xl text-center">
+    <h2 class="text-3xl">Stuff to do for 2022</h2>
+    <ul class="flex">
+        <li class="m-10 p-20 text-center shadow-lg rounded-xl"><div class="text-4xl font-bold">0/7</div> Talks</li>
+        <li class="m-10 p-20 text-center shadow-lg rounded-xl"><div class="text-4xl font-bold">0/7</div> Completed<br/>Projects</li>
+        <li class="m-10 p-20 text-center shadow-lg rounded-xl"><div class="text-4xl font-bold">0/7</div> Articles</li>
     </ul>
 </div>
 </body>
