@@ -23,6 +23,11 @@ export interface YearlyData {
   updates: Update[];
 }
 
+export interface ProgressData {
+  categories: Array<ProgressItem & { id: number }>;
+  updates: Array<Update & { id: number }>;
+}
+
 export interface ThemeState {
   isDark: boolean;
   toggleTheme: () => void;

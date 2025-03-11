@@ -1,69 +1,59 @@
 <template>
-    <div class="mb-6 flex flex-wrap gap-2">
-      <button
-        v-for="category in categories"
-        :key="category"
-        @click="toggleFilter(category)"
-        class="px-3 py-1 rounded-full text-sm transition-colors duration-200"
-        :class="isActive(category) ? activeClass : inactiveClass"
-      >
-        {{ category }}
-      </button>
-    </div>
-  </template>
+  <div class="mb-6 flex flex-wrap gap-2">
+    <button
+      v-for="category in categories"
+      :key="category"
+      @click="toggleFilter(category)"
+      class="px-3 py-1 rounded-full text-sm transition-colors duration-200"
+      :class="isActive(category) ? activeClass : inactiveClass"
+    >
+      {{ category }}
+    </button>
+  </div>
+</template>
 
-  <script lang="ts">
-  import { defineComponent, ref, computed } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 
-  export default defineComponent({
-    name: 'UpdateFilter',
-    props: {
-      categories: {
-        type: Array as () => string[],
-        default: () => ['All', 'Talks', 'Projects', 'Articles']
-      }
-    },
-    emits: ['filter-changed'],
-    setup(props, { emit }) {
-      const activeFilters = ref<string[]>(['All']);
+// Props definition
+const props = withDefaults(defineProps<{
+  categories?: string[];
+}>(), {
+  categories: () => ['All', 'Talks', 'Projects', 'Articles']
+});
 
-      const toggleFilter = (category: string) => {
-        if (category === 'All') {
-          activeFilters.value = ['All'];
-        } else {
-          // Remove 'All' if it's there
-          if (activeFilters.value.includes('All')) {
-            activeFilters.value = activeFilters.value.filter(f => f !== 'All');
-          }
+// Emits definition
+const emit = defineEmits<{
+  'filter-changed': [filters: string[]];
+}>();
 
-          // Toggle the selected category
-          if (activeFilters.value.includes(category)) {
-            activeFilters.value = activeFilters.value.filter(f => f !== category);
-            // If no filters left, add 'All' back
-            if (activeFilters.value.length === 0) {
-              activeFilters.value = ['All'];
-            }
-          } else {
-            activeFilters.value.push(category);
-          }
-        }
+const activeFilters = ref<string[]>(['All']);
 
-        emit('filter-changed', activeFilters.value);
-      };
-
-      const isActive = (category: string) => {
-        return activeFilters.value.includes(category);
-      };
-
-      const activeClass = 'bg-blue-500 text-white dark:bg-blue-600';
-      const inactiveClass = 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
-
-      return {
-        toggleFilter,
-        isActive,
-        activeClass,
-        inactiveClass
-      };
+const toggleFilter = (category: string) => {
+  if (category === 'All') {
+    activeFilters.value = ['All'];
+  } else {
+    if (activeFilters.value.includes('All')) {
+      activeFilters.value = activeFilters.value.filter(f => f !== 'All');
     }
-  });
-  </script>
+
+    if (activeFilters.value.includes(category)) {
+      activeFilters.value = activeFilters.value.filter(f => f !== category);
+      if (activeFilters.value.length === 0) {
+        activeFilters.value = ['All'];
+      }
+    } else {
+      activeFilters.value.push(category);
+    }
+  }
+
+  emit('filter-changed', activeFilters.value);
+};
+
+const isActive = (category: string): boolean => {
+  return activeFilters.value.includes(category);
+};
+
+const activeClass = 'bg-blue-500 text-white dark:bg-blue-600';
+const inactiveClass = 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
+</script>
