@@ -1,11 +1,15 @@
 <template>
-  <div class="mb-6 flex flex-wrap gap-2">
+  <div class="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter categories">
     <button
       v-for="category in categories"
       :key="category"
       @click="toggleFilter(category)"
       class="px-3 py-1 rounded-full text-sm transition-colors duration-200"
-      :class="isActive(category) ? activeClass : inactiveClass"
+      :class="isActive(category)
+        ? 'bg-blue-500 text-white dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700'
+        : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'"
+      :aria-pressed="isActive(category)"
+      :aria-label="`Filter by ${category}`"
     >
       {{ category }}
     </button>
@@ -13,47 +17,53 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
-// Props definition
+// Define emit events
+const emit = defineEmits<{
+  'filter-change': [filters: string[]];
+}>();
+
+// Move the categories to props definition directly
 const props = withDefaults(defineProps<{
   categories?: string[];
 }>(), {
-  categories: () => ['All', 'Talks', 'Projects', 'Articles']
+  categories: () => [ALL_CATEGORY, 'Talks', 'Projects', 'Articles']
 });
 
-// Emits definition
-const emit = defineEmits<{
-  'filter-changed': [filters: string[]];
-}>();
+const ALL_CATEGORY = 'All' as const;
+const activeFilters = ref<string[]>([ALL_CATEGORY]);
 
-const activeFilters = ref<string[]>(['All']);
-
-const toggleFilter = (category: string) => {
-  if (category === 'All') {
-    activeFilters.value = ['All'];
+const toggleFilter = (category: string): void => {
+  if (category === ALL_CATEGORY) {
+    activeFilters.value = [ALL_CATEGORY];
   } else {
-    if (activeFilters.value.includes('All')) {
-      activeFilters.value = activeFilters.value.filter(f => f !== 'All');
+    // Remove 'All' when selecting a specific category
+    if (activeFilters.value.includes(ALL_CATEGORY)) {
+      activeFilters.value = activeFilters.value.filter(f => f !== ALL_CATEGORY);
     }
 
+    // Toggle the selected category
     if (activeFilters.value.includes(category)) {
       activeFilters.value = activeFilters.value.filter(f => f !== category);
+      // Reset to 'All' if no filters remain
       if (activeFilters.value.length === 0) {
-        activeFilters.value = ['All'];
+        activeFilters.value = [ALL_CATEGORY];
       }
     } else {
       activeFilters.value.push(category);
     }
   }
 
-  emit('filter-changed', activeFilters.value);
+  emit('filter-change', activeFilters.value);
 };
 
 const isActive = (category: string): boolean => {
   return activeFilters.value.includes(category);
 };
 
-const activeClass = 'bg-blue-500 text-white dark:bg-blue-600';
-const inactiveClass = 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
+// Emit initial filter state when mounted
+onMounted(() => {
+  emit('filter-change', activeFilters.value);
+});
 </script>
