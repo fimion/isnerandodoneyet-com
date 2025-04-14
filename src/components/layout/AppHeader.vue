@@ -1,27 +1,39 @@
+<script setup lang="ts">
+defineProps({
+  isDarkMode: {
+    type: Boolean,
+    default: false
+  }
+});
+
+defineEmits(['toggle-dark-mode']);
+</script>
+
+
 <template>
   <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm py-4 sticky top-0 z-10">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
       <router-link to="/" class="text-xl font-bold text-gray-900 dark:text-white">IsNerandoDoneYet</router-link>
-      
+
       <nav class="flex items-center space-x-6">
-        <router-link 
-          to="/" 
+        <router-link
+          to="/"
           class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
           active-class="text-blue-600 dark:text-blue-400"
           exact
         >
           Home
         </router-link>
-        <router-link 
-          to="/archives" 
+        <!-- <router-link
+          to="/archives"
           class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
           active-class="text-blue-600 dark:text-blue-400"
         >
           Archives
-        </router-link>
-        
-        <button 
-          @click="$emit('toggle-dark-mode')" 
+        </router-link> -->
+
+        <button
+          @click="$emit('toggle-dark-mode')"
           class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
           aria-label="Toggle dark mode"
         >
@@ -36,14 +48,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-defineProps({
-  isDarkMode: {
-    type: Boolean,
-    default: false
-  }
-});
-
-defineEmits(['toggle-dark-mode']);
-</script>

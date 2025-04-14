@@ -245,25 +245,36 @@ class ProgressService {
       year: 2025,
       items: [
         {
-          total: 7,
-          completed: 0,
+          total: 10,
+          completed: 3,
           title: 'Talks',
           category: 'Talks',
         },
         {
-          total: 7,
+          total: 10,
           completed: 0,
           title: 'Projects',
           category: 'Projects',
         },
         {
-          total: 7,
+          total: 10,
           completed: 0,
           title: 'Articles',
           category: 'Articles',
         },
       ],
-      updates: [],
+      updates: [
+        {
+          date: 'April 5, 2025',
+          text: 'Started planning talks for',
+          category: 'Talks',
+          year: 2025,
+          link: {
+            url: 'Need link to my website',
+            text: '2025 conference season',
+          },
+        },
+      ],
     },
   ];
 
