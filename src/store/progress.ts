@@ -6,14 +6,14 @@ const initialYears: YearlyData[] = [
   {
     year: 2022,
     items: [
-      { total: 7, completed: 4, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 4, title: 'Talks', category: 'Talks' },
       {
-        total: 7,
+        total: 10,
         completed: 2,
         title: 'Completed\nProjects',
         category: 'Projects',
       },
-      { total: 7, completed: 0, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
     ],
     updates: [
       {
@@ -129,8 +129,8 @@ const initialYears: YearlyData[] = [
   {
     year: 2023,
     items: [
-      { total: 8, completed: 3, title: 'Talks', category: 'Talks' },
-      { total: 5, completed: 3, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 3, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 3, title: 'Projects', category: 'Projects' },
       { total: 10, completed: 4, title: 'Articles', category: 'Articles' },
     ],
     updates: [
@@ -153,9 +153,9 @@ const initialYears: YearlyData[] = [
   {
     year: 2024,
     items: [
-      { total: 7, completed: 0, title: 'Talks', category: 'Talks' },
-      { total: 7, completed: 0, title: 'Projects', category: 'Projects' },
-      { total: 7, completed: 0, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
     ],
     updates: [
       {

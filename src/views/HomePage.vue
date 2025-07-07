@@ -6,6 +6,8 @@ import ProgressCard from '../components/ProgressCard.vue';
 import ProgressUpdate from '../components/ProgressUpdate.vue';
 import UpdateFilter from '../components/UpdateFilter.vue';
 import type { ProgressItem, Update } from '../types';
+import { useLocalStorage } from '../composables/useLocalStorage';
+import AccordionWithCheckboxes from '../components/AccordionWithCheckboxes.vue';
 
 // Type definitions
 // (IDs are added in the store's getter)
@@ -13,7 +15,8 @@ type CategoryWithId = ProgressItem & { id: number };
 type UpdateWithId = Update & { id: number };
 
 const progressStore = useProgressStore();
-const { fetchProgressData } = progressStore;
+const { fetchProgressData, getYearData } = progressStore;
+const localStorage = useLocalStorage();
 
 const activeFilter = ref<string>('all');
 
@@ -46,6 +49,20 @@ const filteredUpdates = computed(() => {
 const updateFilter = (filter: string): void => {
   activeFilter.value = filter;
 };
+
+const currentYear = new Date().getFullYear();
+const yearData = computed(() => getYearData(currentYear));
+
+function getSectionItems(category: string) {
+  return yearData.value?.updates.filter((u: any) => u.category === category) || [];
+}
+
+function getCheckboxState(id: string) {
+  return localStorage.getItem(`checkbox_${id}`) === 'true';
+}
+function setCheckboxState(id: string, value: boolean) {
+  localStorage.setItem(`checkbox_${id}`, value ? 'true' : 'false');
+}
 </script>
 
 <template>
@@ -80,5 +97,13 @@ const updateFilter = (filter: string): void => {
         No recent updates available.
       </p>
     </section>
+
+    <!-- New Sections for Projects, Talks, and Articles -->
+    <AccordionWithCheckboxes id="projects" title="Projects" description="A list of projects for the current year."
+      :items="getSectionItems('Projects')" :getCheckboxState="getCheckboxState" :setCheckboxState="setCheckboxState" />
+    <AccordionWithCheckboxes id="talks" title="Talks" description="Talks and presentations for the current year."
+      :items="getSectionItems('Talks')" :getCheckboxState="getCheckboxState" :setCheckboxState="setCheckboxState" />
+    <AccordionWithCheckboxes id="articles" title="Articles" description="Articles written or published this year."
+      :items="getSectionItems('Articles')" :getCheckboxState="getCheckboxState" :setCheckboxState="setCheckboxState" />
   </main>
 </template>
