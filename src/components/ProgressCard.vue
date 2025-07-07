@@ -1,4 +1,3 @@
-
 <script lang="ts">
 import { defineComponent, computed, onMounted, ref } from 'vue';
 import type { PropType } from 'vue';
@@ -43,45 +42,31 @@ export default defineComponent({
 
 
 <template>
-    <div
-      class="p-8 md:p-12 lg:p-20 text-center shadow-lg rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
-    >
-      <div class="mb-4">
-        <svg class="w-full h-32" viewBox="0 0 100 100">
-          <circle
-            class="text-gray-200 dark:text-gray-700 stroke-current"
-            stroke-width="8"
-            cx="50"
-            cy="50"
-            r="40"
-            fill="transparent"
-          ></circle>
-          <circle
-            class="text-blue-500 dark:text-blue-400 progress-ring stroke-current"
-            stroke-width="8"
-            :stroke-dasharray="circumference"
-            :stroke-dashoffset="dashOffset"
-            stroke-linecap="round"
-            cx="50"
-            cy="50"
-            r="40"
-            fill="transparent"
-          ></circle>
-          <text
-            x="50"
-            y="50"
-            font-size="20"
-            text-anchor="middle"
-            alignment-baseline="middle"
-            class="font-bold fill-current text-gray-800 dark:text-white"
-          >
-            {{ item.completed }}/{{ item.total }}
-          </text>
-        </svg>
-      </div>
-      <div class="text-xl font-medium text-gray-800 dark:text-white" v-html="formattedTitle"></div>
-      <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-        {{ progressPercentage }}% Complete
-      </div>
+  <div class="progress-card" role="region" :aria-label="`${item.title} progress card`" tabindex="0">
+    <div class="mb-4">
+      <svg class="w-full h-32" viewBox="0 0 100 100" role="img"
+        :aria-label="`${progressPercentage}% complete for ${item.title}`" aria-describedby="progress-desc">
+        <circle class="text-gray-200 dark:text-gray-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+          fill="transparent"></circle>
+        <circle class="text-blue-500 dark:text-blue-400 progress-ring stroke-current" stroke-width="8"
+          :stroke-dasharray="circumference" :stroke-dashoffset="dashOffset" stroke-linecap="round" cx="50" cy="50"
+          r="40" fill="transparent"></circle>
+        <text x="50" y="50" font-size="20" text-anchor="middle" alignment-baseline="middle"
+          class="font-bold fill-current text-gray-800 dark:text-white">
+          {{ item.completed }}/{{ item.total }}
+        </text>
+        <desc id="progress-desc">{{ progressPercentage }}% complete for {{ item.title }}</desc>
+      </svg>
     </div>
-  </template>
+    <div class="text-xl font-medium text-gray-800 dark:text-white" v-html="formattedTitle"></div>
+    <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      {{ progressPercentage }}% Complete
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.progress-card {
+  @apply p-8 md:p-12 lg:p-20 text-center shadow-lg rounded-xl bg-white dark:bg-gray-800 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1;
+}
+</style>
