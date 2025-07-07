@@ -62,7 +62,7 @@ const updateFilter = (filter: string): void => {
     </div>
 
     <section class="mb-16" aria-labelledby="goals-heading">
-      <h2 id="goals-heading" class="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-white">2024 Goals
+      <h2 id="goals-heading" class="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-white">2025 Goals
         Progress</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <progress-card v-for="(category: CategoryWithId) in progressData" :key="category.id" :item="category" />
