@@ -58,8 +58,8 @@ export default defineComponent({
         <desc id="progress-desc">{{ progressPercentage }}% complete for {{ item.title }}</desc>
       </svg>
     </div>
-    <div class="text-xl font-medium text-gray-800 dark:text-white" v-html="formattedTitle"></div>
-    <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+    <div class="text-xl text-center font-medium text-gray-800 dark:text-white" v-html="formattedTitle"></div>
+    <div class="mt-2 text-center text-sm text-gray-600 dark:text-gray-300">
       {{ progressPercentage }}% Complete
     </div>
   </div>

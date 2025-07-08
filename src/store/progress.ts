@@ -176,13 +176,23 @@ const initialYears: YearlyData[] = [
     ],
     updates: [
       {
-        date: 'April 5, 2025',
-        text: 'Started planning talks for',
+        date: 'April 29, 2025',
+        text: 'Social Goodness || Civic Hacking - What\'s in it for me?',
         category: 'Talks',
         year: 2025,
         link: {
-          url: 'Need link to my website',
-          text: '2025 conference season',
+          url: 'https://developingdvlpr.com/speaking',
+          text: 'Social Goodness || Civic Hacking - What\'s in it for me? || DevOps Days Atlanta 2025',
+        },
+      },
+      {
+        date: 'April 5, 2025',
+        text: 'Skills to Bills: A Users Guide to Demonstrated Competency',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/speaking',
+          text: 'Skills to Bills: A Users Guide to Demonstrated Competency || Orlando Code Camp 2025',
         },
       },
     ],
