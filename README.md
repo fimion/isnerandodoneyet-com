@@ -1,3 +1,4 @@
+
 # Is Nerando Done Yet? – Progress Tracker
 
 A personal progress tracker for yearly goals (Talks, Projects, Articles), built with Vue 3, TypeScript, Vite, Pinia, and Tailwind CSS.
@@ -55,3 +56,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## License
 MIT
+
