@@ -170,19 +170,19 @@ const initialYears: YearlyData[] = [
   {
     year: 2025,
     items: [
-      { total: 10, completed: 3, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 4, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 2, title: 'Projects', category: 'Projects' },
       { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
     ],
     updates: [
       {
         date: 'April 29, 2025',
-        text: 'Social Goodness || Civic Hacking - What\'s in it for me?',
+        text: "Social Goodness || Civic Hacking - What's in it for me?",
         category: 'Talks',
         year: 2025,
         link: {
           url: 'https://developingdvlpr.com/speaking',
-          text: 'Social Goodness || Civic Hacking - What\'s in it for me? || DevOps Days Atlanta 2025',
+          text: "Social Goodness || Civic Hacking - What's in it for me? || DevOps Days Atlanta 2025",
         },
       },
       {
@@ -193,6 +193,46 @@ const initialYears: YearlyData[] = [
         link: {
           url: 'https://developingdvlpr.com/speaking',
           text: 'Skills to Bills: A Users Guide to Demonstrated Competency || Orlando Code Camp 2025',
+        },
+      },
+      {
+        date: 'March 6, 2025',
+        text: 'How !To Be Mentored',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/speaking',
+          text: 'How !To Be Mentored || DevNexus 2025',
+        },
+      },
+      {
+        date: 'May 23, 2025',
+        text: 'Back to Basics: Essential JavaScript Foundations for Modern Framework Development',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/speaking',
+          text: 'Back to Basics: Essential JavaScript Foundations for Modern Framework Development|| 200OK 2025',
+        },
+      },
+      {
+        date: 'July 20, 2025',
+        text: 'IsNerandoDoneYet ~ Status Tracker Of the Current Years Progress',
+        category: 'Projects',
+        year: 2025,
+        link: {
+          url: 'https://isnerandodoneyet.com/',
+          text: 'IsNerandoDoneYet ~ Status Tracker Of the Current Years Progress',
+        },
+      },
+      {
+        date: 'July 12, 2025',
+        text: 'DevelopingDvlpr ||  MVP of Current Portfolio',
+        category: 'Projects',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/',
+          text: 'DevelopingDvlpr ||  MVP of Current Portfolio',
         },
       },
     ],

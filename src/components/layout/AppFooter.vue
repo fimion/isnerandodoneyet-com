@@ -3,12 +3,12 @@
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-gray-600 dark:text-gray-400">
         © {{ new Date().getFullYear() }} IsNerandoDoneYet •
-        <a href="https://github.com/your-username/isnerandodoneyet-com"
+        <a href="https://github.com/fimion/isnerandodoneyet-com" target="_blank" rel="noopener noreferrer"
           class="text-blue-600 dark:text-blue-400 hover:underline">Project GitHub</a>
       </p>
       <p class="text-gray-600 dark:text-gray-400 flex flex-wrap justify-center gap-x-4 gap-y-2">
-        <a href="https://bsky.app/profile/nerajno.bsky.social" class="text-blue-600 dark:text-blue-400 hover:underline">Bluesky</a>
-        <a href="https://developingdvlpr.com/" class="text-blue-600 dark:text-blue-400 hover:underline">Portfolio</a>
+        <a href="https://bsky.app/profile/nerajno.bsky.social" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">Bluesky</a>
+        <a href="https://developingdvlpr.com/" target="_blank" rel="noopener noreferrer"  class="text-blue-600 dark:text-blue-400 hover:underline">Portfolio</a>
       </p>
     </div>
   </footer>
