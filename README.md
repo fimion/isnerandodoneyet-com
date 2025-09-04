@@ -39,7 +39,6 @@ npm run preview
 - `src/` – Main source code
   - `components/` – UI components
   - `views/` – Page views
-  - `store/` – Pinia store for progress data
   - `composables/` – Reusable logic (e.g., theme, localStorage)
   - `assets/` – Styles and images
 - `public/` – Static assets
