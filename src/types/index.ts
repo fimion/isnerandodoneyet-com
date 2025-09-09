@@ -21,7 +21,7 @@ export interface BaseActivity extends BaseEntity {
 // =======================
 
 export type TalkStatus = 'accepted' | 'pending' | 'completed' | 'cancelled';
-export type ProjectStatus = 'planning' | 'in-progress' | 'completed' ;
+export type ProjectStatus = 'planning' | 'in-progress' | 'completed';
 export type ArticleStatus = 'draft' | 'published' | 'updated';
 
 export interface TalkActivity extends BaseActivity {
