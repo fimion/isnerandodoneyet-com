@@ -49,7 +49,7 @@ export interface ArticleActivity extends BaseActivity {
   type: 'article';
   status: ArticleStatus;
   articleUrl?: string;
-  publicationLocation?: string; // Personal blog && dev.to
+  publicationLocation?: string; // e.g., Personal blog, dev.to
   publishedDate?: string;
 }
 
