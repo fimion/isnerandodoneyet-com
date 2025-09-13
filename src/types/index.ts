@@ -199,5 +199,11 @@ export type CreateTalkActivity = NewActivity<TalkActivity>;
 export type CreateProjectActivity = NewActivity<ProjectActivity>;
 export type CreateArticleActivity = NewActivity<ArticleActivity>;
 
-// Union type for all creation types
-export type CreateActivity = CreateTalkActivity | CreateProjectActivity | CreateArticleActivity;
+// Basic Update interface for updateService usage
+export interface Update {
+  id: string;
+  date: string;
+  text: string;
+  category?: string;
+  [key: string]: any;
+}
