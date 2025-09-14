@@ -41,8 +41,9 @@ import type { Update } from "../types";
       const updates = await this.loadUpdates()
       const lowercaseQuery = query.toLowerCase()
       return updates.filter(update =>
-        update.title.toLowerCase().includes(lowercaseQuery) ||
-        update.description.toLowerCase().includes(lowercaseQuery)
+        Object.values(update)
+          .filter(value => typeof value === 'string')
+          .some(value => value.toLowerCase().includes(lowercaseQuery))
       )
     }
   }
