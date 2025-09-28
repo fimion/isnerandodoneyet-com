@@ -61,7 +61,6 @@ export type Activity = TalkActivity | ProjectActivity | ArticleActivity;
 // =======================
 
 export interface ProgressItem {
-  id: string;
   title: string;
   category: string;
   total: number;
@@ -86,7 +85,7 @@ export interface TimelineLink {
   external?: boolean;
 }
 
-export interface TimelineUpdate extends BaseEntity {
+export interface TimelineUpdate {
   date: string;
   text: string;
   category: string;
@@ -104,8 +103,6 @@ export interface YearlyData {
   year: number;
   items: ProgressItem[];
   updates: TimelineUpdate[];
-  totalActivities: number;
-  completionRate: number;
 }
 
 export interface CategoryData {
@@ -115,10 +112,19 @@ export interface CategoryData {
   items: ProgressItem[];
 }
 
+// Extended ProgressItem with id for UI purposes
+export interface ProgressItemWithId extends ProgressItem {
+  id: number;
+}
+
+// Extended TimelineUpdate with id for UI purposes
+export interface TimelineUpdateWithId extends TimelineUpdate {
+  id: number;
+}
+
 export interface ProgressData {
-  categories: CategoryData[];
-  updates: TimelineUpdate[];
-  totalProgress: ProgressMetrics;
+  categories: ProgressItemWithId[];
+  updates: TimelineUpdateWithId[];
 }
 
 // =======================

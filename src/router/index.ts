@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router';
 // Lazy load all views
 // import HomePage from '../views/HomePage.vue';
 // import NotFoundPage from '../views/NotFoundPage.vue';
@@ -19,7 +19,7 @@ const routes = [
     path: '/year/:year',
     name: 'YearDetail',
     component: () => import('../views/YearPage.vue'),
-    props: true,
+    props: (route: RouteLocationNormalized) => ({ year: Number(route.params.year) }),
   },
   {
     path: '/:pathMatch(.*)*',
@@ -31,7 +31,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(_to, _from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
     } else {

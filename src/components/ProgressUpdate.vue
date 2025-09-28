@@ -26,13 +26,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
-import type { Update } from '../types';
+import type { TimelineUpdate } from '../types';
 
 export default defineComponent({
   name: 'ProgressUpdate',
   props: {
     update: {
-      type: Object as PropType<Update>,
+      type: Object as PropType<TimelineUpdate>,
       required: true
     }
   }

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import type { YearlyData, ProgressItem, Update, ProgressData } from '../types';
+import type { YearlyData, ProgressData, ProgressItemWithId, TimelineUpdateWithId } from '../types';
 
 // Initial static data (copied from progressService for now)
 const initialYears: YearlyData[] = [
@@ -83,7 +83,7 @@ const initialYears: YearlyData[] = [
         category: 'Projects',
         year: 2022,
         link: { url: 'https://developindvlpr.com/', text: 'portfolio' },
-        additionalText: 'to its most current version.',
+        additionalText: ' to its most current version.',
       },
       {
         date: 'Nov 9, 2022',
@@ -92,7 +92,7 @@ const initialYears: YearlyData[] = [
         year: 2022,
         link: {
           url: 'https://twitter.com/nerajno/status/1591142693820067840?s=20&t=wbDw7NqFSwXBSTc6U6ldYg',
-          text: 'Open-Sourced Learning',
+          text: ' Open-Sourced Learning',
         },
         additionalText: 'at ConnectTech2022.',
       },
@@ -283,11 +283,11 @@ export const useProgressStore = defineStore('progress', {
         return { categories: [], updates: [] };
       }
       return {
-        categories: yearData.items.map((item, index) => ({
+        categories: yearData.items.map((item, index): ProgressItemWithId => ({
           id: index + 1,
           ...item,
         })),
-        updates: yearData.updates.map((update, index) => ({
+        updates: yearData.updates.map((update, index): TimelineUpdateWithId => ({
           id: index + 1,
           ...update,
         })),

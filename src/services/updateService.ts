@@ -20,7 +20,7 @@ import type { Update } from "../types";
           throw new Error('Failed to load updates data')
         }
       }
-      return this.updates
+      return this.updates || []
     }
 
     async getAll(): Promise<Update[]> {
@@ -32,7 +32,7 @@ import type { Update } from "../types";
       return updates.find(update => update.id === id) || null
     }
 
-    async getByType(type: Update['type']): Promise<Update[]> {
+    async getByType(type: any): Promise<Update[]> {
       const updates = await this.loadUpdates()
       return updates.filter(update => update.type === type)
     }
@@ -54,6 +54,6 @@ import type { Update } from "../types";
 export interface UpdateRepository {
     getAll(): Promise<Update[]>
     getById(id: string): Promise<Update | null>
-    getByType(type: Update['type']): Promise<Update[]>
+    getByType(type: any): Promise<Update[]>
     search(query: string): Promise<Update[]>
   }
