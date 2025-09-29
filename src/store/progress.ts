@@ -21,7 +21,7 @@ const initialYears: YearlyData[] = [
         text: 'Created a list of talks on',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://sessionize.com/Nerajno', text: 'Sessionize' },
+        link: { url: 'https://sessionize.com/Nerajno', text: 'Sessionize.' },
       },
       {
         date: 'August 12, 2022',
@@ -38,21 +38,21 @@ const initialYears: YearlyData[] = [
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.MagnoliaJS.com/', text: 'MagnoliaJS' },
+        link: { url: 'https://www.MagnoliaJS.com/', text: 'MagnoliaJS 2022.' },
       },
       {
         date: 'July 3, 2022',
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.refactr.tech/', text: 'Refactr' },
+        link: { url: 'https://www.refactr.tech/', text: 'Refactr 2022.' },
       },
       {
         date: 'July 30, 2022',
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.atldevcon.com/', text: 'AtlDevCon 2022' },
+        link: { url: 'https://www.atldevcon.com/', text: 'AtlDevCon 2022.' },
       },
       {
         date: 'Aug 13, 2022',
