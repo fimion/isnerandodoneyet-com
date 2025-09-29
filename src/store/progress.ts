@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
-import type { YearlyData, ProgressData, ProgressItemWithId, TimelineUpdateWithId } from '../types';
+import type { YearlyData, ProgressItem, Update, ProgressData } from '../types';
 
-// Initial static data (copied from progressService for now)
+// Initial static data (updated with 2025 articles)
 const initialYears: YearlyData[] = [
   {
     year: 2022,
@@ -21,7 +21,7 @@ const initialYears: YearlyData[] = [
         text: 'Created a list of talks on',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://sessionize.com/Nerajno', text: 'Sessionize.' },
+        link: { url: 'https://sessionize.com/Nerajno', text: 'Sessionize' },
       },
       {
         date: 'August 12, 2022',
@@ -38,21 +38,21 @@ const initialYears: YearlyData[] = [
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.MagnoliaJS.com/', text: 'MagnoliaJS 2022.' },
+        link: { url: 'https://www.MagnoliaJS.com/', text: 'MagnoliaJS' },
       },
       {
         date: 'July 3, 2022',
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.refactr.tech/', text: 'Refactr 2022.' },
+        link: { url: 'https://www.refactr.tech/', text: 'Refactr' },
       },
       {
         date: 'July 30, 2022',
         text: 'Talk accepted to',
         category: 'Talks',
         year: 2022,
-        link: { url: 'https://www.atldevcon.com/', text: 'AtlDevCon 2022.' },
+        link: { url: 'https://www.atldevcon.com/', text: 'AtlDevCon 2022' },
       },
       {
         date: 'Aug 13, 2022',
@@ -83,7 +83,7 @@ const initialYears: YearlyData[] = [
         category: 'Projects',
         year: 2022,
         link: { url: 'https://developindvlpr.com/', text: 'portfolio' },
-        additionalText: ' to its most current version.',
+        additionalText: 'to its most current version.',
       },
       {
         date: 'Nov 9, 2022',
@@ -92,7 +92,7 @@ const initialYears: YearlyData[] = [
         year: 2022,
         link: {
           url: 'https://twitter.com/nerajno/status/1591142693820067840?s=20&t=wbDw7NqFSwXBSTc6U6ldYg',
-          text: ' Open-Sourced Learning',
+          text: 'Open-Sourced Learning',
         },
         additionalText: 'at ConnectTech2022.',
       },
@@ -170,11 +170,12 @@ const initialYears: YearlyData[] = [
   {
     year: 2025,
     items: [
-      { total: 10, completed: 4, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 5, title: 'Talks', category: 'Talks' },
       { total: 10, completed: 2, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 5, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // TALKS - Already listed
       {
         date: 'April 29, 2025',
         text: "Social Goodness || Civic Hacking - What's in it for me?",
@@ -216,6 +217,18 @@ const initialYears: YearlyData[] = [
         },
       },
       {
+        date: 'August 28, 2025',
+        text: 'Carolina Codes 2025: My First-Time Speaker Experience',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://dev.to/nerajno/carolina-codes-2025-my-first-time-speaker-experience-89a',
+          text: 'Carolina Codes 2025 Conference Speaker',
+        },
+      },
+      
+      // PROJECTS - Already listed
+      {
         date: 'July 20, 2025',
         text: 'IsNerandoDoneYet ~ Status Tracker Of the Current Years Progress',
         category: 'Projects',
@@ -235,6 +248,60 @@ const initialYears: YearlyData[] = [
           text: 'DevelopingDvlpr ||  MVP of Current Portfolio',
         },
       },
+      
+      // ARTICLES - New additions from blog
+      {
+        date: 'January 20, 2025',
+        text: 'Published: Building with TypeScript: A Lego-Based Guide',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://dev.to/nerajno/building-with-typescript-a-lego-based-guide-194k',
+          text: 'Building with TypeScript: A Lego-Based Guide',
+        },
+      },
+      {
+        date: 'May 20, 2025',
+        text: 'Published: 11 JavaScript Fundamentals for Vue Developers',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://dev.to/nerajno/11-javascript-fundamentals-for-vue-developers-42a1',
+          text: '11 JavaScript Fundamentals for Vue Developers',
+        },
+      },
+      {
+        date: 'August 15, 2025',
+        text: 'Published: And It Was Written - An Introspective on the Importance of READMEs',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://dev.to/nerajno/and-it-was-written-an-introspective-in-the-importance-of-readmes-ipp',
+          text: 'And It Was Written: The Importance of READMEs',
+        },
+      },
+      {
+        date: 'August 28, 2025',
+        text: 'Published: Carolina Codes 2025 - My First-Time Speaker Experience',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://dev.to/nerajno/carolina-codes-2025-my-first-time-speaker-experience-89a',
+          text: 'Carolina Codes 2025: My First-Time Speaker Experience',
+        },
+      },
+      {
+        date: 'September 2025',
+        text: 'Published: Mastering D3.js for Interactive Data Visualization',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/why-d3js-enhancing-your-storytelling-technically',
+          text: 'Mastering D3.js for Interactive Data Visualization',
+        },
+      },
+      // Note: "How !To Be Mentored V2" appears to be upcoming based on the blog listing
+      // but I couldn't find a published date, so leaving it out for now
     ],
   },
 ];
@@ -283,11 +350,11 @@ export const useProgressStore = defineStore('progress', {
         return { categories: [], updates: [] };
       }
       return {
-        categories: yearData.items.map((item, index): ProgressItemWithId => ({
+        categories: yearData.items.map((item, index) => ({
           id: index + 1,
           ...item,
         })),
-        updates: yearData.updates.map((update, index): TimelineUpdateWithId => ({
+        updates: yearData.updates.map((update, index) => ({
           id: index + 1,
           ...update,
         })),
