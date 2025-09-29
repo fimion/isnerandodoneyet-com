@@ -172,7 +172,7 @@ const initialYears: YearlyData[] = [
     items: [
       { total: 10, completed: 5, title: 'Talks', category: 'Talks' },
       { total: 10, completed: 2, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 5, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 6, title: 'Articles', category: 'Articles' },
     ],
     updates: [
       // TALKS - Already listed
@@ -300,8 +300,16 @@ const initialYears: YearlyData[] = [
           text: 'Mastering D3.js for Interactive Data Visualization',
         },
       },
-      // Note: "How !To Be Mentored V2" appears to be upcoming based on the blog listing
-      // but I couldn't find a published date, so leaving it out for now
+      {
+        date: 'September 2025',
+        text: 'Published: How !To Be Mentored V2 - Building Resilient Tech Careers Through Strategic Mentorship',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/how-to-be-mentored-v2-building-resilient-tech-careers-through-strategic-mentorship',
+          text: 'How !To Be Mentored V2: Building Resilient Tech Careers Through Strategic Mentorship',
+        },
+      },
     ],
   },
 ];
