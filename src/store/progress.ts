@@ -3,8 +3,70 @@ import type { YearlyData, ProgressItem, Update, ProgressData } from '../types';
 
 // Comprehensive update with all articles from blog and dev.to
 const initialYears: YearlyData[] = [
+  // Template for 2026 - Uncomment and update with actual data
+  /*{
+    year: 2026,
+    items: [
+      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 5, completed: 0, title: 'Mentorship', category: 'Mentorship' },
+      { total: 5, completed: 0, title: 'Leadership', category: 'Leadership' },
+    ],
+    updates: [
+      // TALKS (10 total)
+      {
+        date: '2026',
+        text: 'Talk 1 Title',
+        category: 'Talks',
+        year: 2026,
+        link: { url: '#', text: 'Event Name' },
+      },
+      // Add 9 more talk items here
+
+      // ARTICLES (10 total)
+      {
+        date: '2026',
+        text: 'Article 1 Title',
+        category: 'Articles',
+        year: 2026,
+        link: { url: '#', text: 'Publication' },
+      },
+      // Add 9 more article items here
+
+      // PROJECTS (10 total)
+      {
+        date: '2026',
+        text: 'Project 1 Description',
+        category: 'Projects',
+        year: 2026,
+        link: { url: '#', text: 'Project Link' },
+      },
+      // Add 9 more project items here
+
+      // MENTORSHIP (5 total)
+      {
+        date: '2026',
+        text: 'Mentorship Activity 1',
+        category: 'Mentorship',
+        year: 2026,
+        link: { url: '#', text: 'More Info' },
+      },
+      // Add 4 more mentorship items here
+
+      // LEADERSHIP (5 total)
+      {
+        date: '2026',
+        text: 'Leadership Activity 1',
+        category: 'Leadership',
+        year: 2026,
+        link: { url: '#', text: 'More Info' },
+      },
+      // Add 4 more leadership items here
+    ],
+  },*/
   {
-    year: 2019,
+    year: 2025,
     items: [
       { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
       { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
@@ -458,6 +520,15 @@ const initialYears: YearlyData[] = [
         },
       },
     ],
+  },
+  {
+    year: 2019,
+    items: [
+      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
+    ],
+    updates: [],
   },
 ];
 
