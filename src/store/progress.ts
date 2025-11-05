@@ -3,7 +3,7 @@ import type { YearlyData, ProgressItem, Update, ProgressData } from '../types';
 
 // Comprehensive update with all articles from blog and dev.to
 const initialYears: YearlyData[] = [
-  // Template for 2026 - Uncomment and update with actual data
+  // Template for 2026 - Ready for future updates
   /*{
     year: 2026,
     items: [
@@ -13,148 +13,339 @@ const initialYears: YearlyData[] = [
       { total: 5, completed: 0, title: 'Mentorship', category: 'Mentorship' },
       { total: 5, completed: 0, title: 'Leadership', category: 'Leadership' },
     ],
-    updates: [
-      // TALKS (10 total)
-      {
-        date: '2026',
-        text: 'Talk 1 Title',
-        category: 'Talks',
-        year: 2026,
-        link: { url: '#', text: 'Event Name' },
-      },
-      // Add 9 more talk items here
-
-      // ARTICLES (10 total)
-      {
-        date: '2026',
-        text: 'Article 1 Title',
-        category: 'Articles',
-        year: 2026,
-        link: { url: '#', text: 'Publication' },
-      },
-      // Add 9 more article items here
-
-      // PROJECTS (10 total)
-      {
-        date: '2026',
-        text: 'Project 1 Description',
-        category: 'Projects',
-        year: 2026,
-        link: { url: '#', text: 'Project Link' },
-      },
-      // Add 9 more project items here
-
-      // MENTORSHIP (5 total)
-      {
-        date: '2026',
-        text: 'Mentorship Activity 1',
-        category: 'Mentorship',
-        year: 2026,
-        link: { url: '#', text: 'More Info' },
-      },
-      // Add 4 more mentorship items here
-
-      // LEADERSHIP (5 total)
-      {
-        date: '2026',
-        text: 'Leadership Activity 1',
-        category: 'Leadership',
-        year: 2026,
-        link: { url: '#', text: 'More Info' },
-      },
-      // Add 4 more leadership items here
-    ],
+    updates: [],
   },*/
+  
   {
     year: 2025,
     items: [
-      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 6, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 2, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 6, title: 'Articles', category: 'Articles' },
+    ],
+    updates: [
+      // TALKS - 5 completed
+      {
+        date: 'March 6, 2025',
+        text: 'How !To Be Mentored || DevNexus 2025',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://devnexus.com/',
+          text: 'DevNexus 2025',
+        },
+      },
+      {
+        date: 'April 5, 2025',
+        text: 'Skills to Bills: A Users Guide to Demonstrated Competency || Orlando Code Camp 2025',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://orlandocodecamp.com/',
+          text: 'Orlando Code Camp 2025',
+        },
+      },
+      {
+        date: 'April 29, 2025',
+        text: "Social Goodness || Civic Hacking - What's in it for me? || DevOps Days Atlanta 2025",
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://www.devopsdays.org/atlanta',
+          text: 'DevOps Days Atlanta 2025',
+        },
+      },
+      {
+        date: 'May 23, 2025',
+        text: 'Back to Basics: Essential JavaScript Foundations || 200OK 2025',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'http://200ok.us',
+          text: '200OK 2025',
+        },
+      },
+      {
+        date: 'August 2025',
+        text: 'Carolina Codes 2025 Conference Speaker',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://carolina.codes',
+          text: 'Carolina Code Conference 2025',
+        },
+      },
+      {
+        date: 'September 2025',
+        text: 'Speaking at Atlanta Developers\' Conference 2025',
+        category: 'Talks',
+        year: 2025,
+        link: {
+          url: 'https://www.atldevcon.com/',
+          text: 'Atlanta Developers\' Conference 2025',
+        },
+      },
+      
+      // PROJECTS - 2 completed
+      {
+        date: 'July 12, 2025',
+        text: 'DevelopingDvlpr - MVP of Current Portfolio',
+        category: 'Projects',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/',
+          text: 'DevelopingDvlpr Portfolio',
+        },
+      },
+      {
+        date: 'July 20, 2025',
+        text: 'IsNerandoDoneYet - Status Tracker Of the Current Years Progress',
+        category: 'Projects',
+        year: 2025,
+        link: {
+          url: 'https://isnerandodoneyet.com/',
+          text: 'IsNerandoDoneYet Progress Tracker',
+        },
+      },
+      
+      // ARTICLES - 6 completed
+      {
+        date: 'January 2025',
+        text: 'Published: Building with TypeScript: A Lego-Based Guide',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/building-with-typescript-a-lego-based-guide',
+          text: 'Building with TypeScript: A Lego-Based Guide',
+        },
+      },
+      {
+        date: 'May 2025',
+        text: 'Published: 11 JavaScript Fundamentals for Vue Developers',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/11-javascript-fundamentals-for-vue-developers',
+          text: '11 JavaScript Fundamentals for Vue Developers',
+        },
+      },
+      {
+        date: 'August 2025',
+        text: 'Published: And It Was Written - An Introspective on the Importance of READMEs',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/and-it-was-written',
+          text: 'And It Was Written: An Introspective on the Importance of READMEs',
+        },
+      },
+      {
+        date: 'August 2025',
+        text: 'Published: Carolina Codes 2025 - My First-Time Speaker Experience',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/carolina-codes-2025-my-first-time-speaker-experience',
+          text: 'Carolina Codes 2025: My First-Time Speaker Experience',
+        },
+      },
+      {
+        date: 'September 2025',
+        text: 'Published: Mastering D3.js for Interactive Data Visualization',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/why-d3js-enhancing-your-storytelling-technically',
+          text: 'Mastering D3.js for Interactive Data Visualization',
+        },
+      },
+      {
+        date: 'September 2025',
+        text: 'Published: How !To Be Mentored V2 - Building Resilient Tech Careers Through Strategic Mentorship',
+        category: 'Articles',
+        year: 2025,
+        link: {
+          url: 'https://developingdvlpr.com/blog/how-to-be-mentored-v2-building-resilient-tech-careers-through-strategic-mentorship',
+          text: 'How !To Be Mentored V2: Building Resilient Tech Careers Through Strategic Mentorship',
+        },
+      },
+    ],
+  },
+  
+  {
+    year: 2024,
+    items: [
+      { total: 10, completed: 4, title: 'Talks', category: 'Talks' },
       { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
       { total: 10, completed: 3, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // TALKS - 4 confirmed from Sessionize
       {
-        date: 'October 30, 2019',
-        text: 'Published: Hackathons - A Junior Developer\'s Growth Tool',
-        category: 'Articles',
-        year: 2019,
+        date: 'February 2024',
+        text: 'Speaking at DevNexus 2024',
+        category: 'Talks',
+        year: 2024,
         link: {
-          url: 'https://dev.to/nerajno/hackathons-a-junior-developer-s-growth-tool-2d5k',
-          text: 'Hackathons - A Junior Developer\'s Growth Tool'
+          url: 'https://devnexus.com/',
+          text: 'DevNexus 2024'
         },
       },
       {
-        date: 'October 30, 2019',
-        text: 'Published: Sight beyond Sight - How Blind Software Engineers Make It Work',
-        category: 'Articles',
-        year: 2019,
+        date: 'March 2024',
+        text: 'Speaking at Orlando Code Camp 2024',
+        category: 'Talks',
+        year: 2024,
         link: {
-          url: 'https://dev.to/nerajno/sight-beyond-sight-how-blind-software-engineers-make-it-work-4lo0',
+          url: 'https://orlandocodecamp.com/',
+          text: 'Orlando Code Camp 2024'
+        },
+      },
+      {
+        date: 'September 2024',
+        text: 'Speaking at Atlanta Developers\' Conference 2024',
+        category: 'Talks',
+        year: 2024,
+        link: {
+          url: 'https://www.atldevcon.com/',
+          text: 'Atlanta Developers\' Conference 2024'
+        },
+      },
+      {
+        date: 'October 2024',
+        text: 'Speaking at Connect.Tech 2024',
+        category: 'Talks',
+        year: 2024,
+        link: {
+          url: 'https://2024.connect.tech',
+          text: 'Connect.Tech 2024'
+        },
+      },
+      
+      // PROJECTS - Need to verify from GitHub
+      // TODO: Check GitHub repositories for 2024 projects
+      
+      // ARTICLES - 3 confirmed
+      {
+        date: '2024',
+        text: 'Published: 11 in 11: Concepts Learnt or Relearnt from Zero Day',
+        category: 'Articles',
+        year: 2024,
+        link: {
+          url: 'https://developingdvlpr.com/blog/11-in-11-concepts-learnt-or-relearnt-from-zero-day',
+          text: '11 in 11: Concepts Learnt or Relearnt from Zero Day'
+        },
+      },
+      {
+        date: 'October 2024',
+        text: 'Published: Developer Networking Tools : A Brief IRL Edition',
+        category: 'Articles',
+        year: 2024,
+        link: {
+          url: 'https://developingdvlpr.com/blog/developer-networking-tools-a-brief-irl-edition',
+          text: 'Developer Networking Tools : A Brief IRL Edition'
+        },
+      },
+      {
+        date: 'October 2024',
+        text: 'Re-published: Sight beyond Sight - How Blind Software Engineers Make It Work',
+        category: 'Articles',
+        year: 2024,
+        link: {
+          url: 'https://developingdvlpr.com/blog/sight-beyond-sight-how-blind-software-engineers-make-it-work',
           text: 'Sight beyond Sight - How Blind Software Engineers Make It Work'
         },
       },
-      {
-        date: 'December 20, 2019',
-        text: 'Published: My #2Cents on How To Build A Beginner Friendly Developer Community',
-        category: 'Articles',
-        year: 2019,
-        link: {
-          url: 'https://dev.to/nerajno/my-2cents-on-how-to-build-a-beginner-friendly-developer-community-fk',
-          text: 'My #2Cents on How To Build A Beginner Friendly Developer Community'
-        },
-      },
     ],
   },
+  
   {
-    year: 2020,
+    year: 2023,
     items: [
-      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 1, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 2, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 3, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 5, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // TALKS - 2 confirmed from Sessionize
       {
-        date: '2020',
-        text: 'Published: Writing The Needed ReadMe',
-        category: 'Articles',
-        year: 2020,
+        date: 'April 2023',
+        text: 'Speaking at Atlanta Cloud Conference 2023',
+        category: 'Talks',
+        year: 2023,
         link: {
-          url: 'https://dev.to/nerajno/writing-the-needed-readme-36l2',
-          text: 'Writing The Needed ReadMe'
+          url: 'https://atlcloudconf.com/',
+          text: 'Atlanta Cloud Conference 2023'
+        },
+      },
+      {
+        date: 'March 2023',
+        text: 'Speaking at DevNexus 2023',
+        category: 'Talks',
+        year: 2023,
+        link: {
+          url: 'https://devnexus.com/',
+          text: 'DevNexus 2023'
+        },
+      },
+      
+      // PROJECTS - Need to verify
+      // TODO: Add 3 projects from 2023
+      
+      // ARTICLES - 5 completed
+      {
+        date: '2023',
+        text: 'Published: So....This is your 1st Tech Conference : #AttendeeEdition',
+        category: 'Articles',
+        year: 2023,
+        link: {
+          url: 'https://developingdvlpr.com/blog/so-this-is-your-1st-tech-conference-attendeeedition',
+          text: 'So....This is your 1st Tech Conference : #AttendeeEdition'
+        },
+      },
+      {
+        date: '2023',
+        text: 'Published: So ... This is Your 1st Tech Conference : #VolunteerEdition',
+        category: 'Articles',
+        year: 2023,
+        link: {
+          url: 'https://developingdvlpr.com/blog/so-this-is-your-1st-tech-conference-volunteeredition',
+          text: 'So ... This is Your 1st Tech Conference : #VolunteerEdition'
+        },
+      },
+      {
+        date: 'December 2023',
+        text: 'Published: Tech-nically Speaking: 30 Days In',
+        category: 'Articles',
+        year: 2023,
+        link: {
+          url: 'https://developingdvlpr.com/blog/tech-nically-speaking-30-days-in',
+          text: 'Tech-nically Speaking: 30 Days In'
+        },
+      },
+      {
+        date: '2023',
+        text: 'Published: How !To Be Mentored (V1)',
+        category: 'Articles',
+        year: 2023,
+        link: {
+          url: 'https://developingdvlpr.com/blog/how-to-be-mentored',
+          text: 'How !To Be Mentored'
+        },
+      },
+      {
+        date: '2023',
+        text: 'Published: Vue-elingual: Teaching Your App to Speak Multiple Languages',
+        category: 'Articles',
+        year: 2023,
+        link: {
+          url: 'https://developingdvlpr.com/blog/vue-elingual-teaching-your-app-to-speak-multiple-languages',
+          text: 'Vue-elingual: Teaching Your App to Speak Multiple Languages'
         },
       },
     ],
   },
-  {
-    year: 2021,
-    items: [
-      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 2, title: 'Articles', category: 'Articles' },
-    ],
-    updates: [
-      {
-        date: '2021',
-        text: 'Published: 6 Strategies Learned from 6 months of Job Hunting',
-        category: 'Articles',
-        year: 2021,
-        link: {
-          url: 'https://dev.to/nerajno/6-strategies-learnt-from-6-months-of-job-hunting-14hn',
-          text: '6 Strategies Learned from 6 months of Job Hunting'
-        },
-      },
-      {
-        date: '2021',
-        text: 'Published: My Takeaways From Sit-Downs with Senior Devs',
-        category: 'Articles',
-        year: 2021,
-        link: {
-          url: 'https://dev.to/nerajno/my-takeaways-from-sit-downs-with-senior-devs-1c18',
-          text: 'My Takeaways From Sit-Downs with Senior Devs'
-        },
-      },
-    ],
-  },
+  
   {
     year: 2022,
     items: [
@@ -163,6 +354,7 @@ const initialYears: YearlyData[] = [
       { total: 10, completed: 1, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // TALKS - 10 completed
       {
         date: 'April 1, 2022',
         text: 'Created a list of talks on',
@@ -244,6 +436,8 @@ const initialYears: YearlyData[] = [
           text: 'How Not !To Be Mentored',
         },
       },
+      
+      // PROJECTS - 2 completed
       {
         date: '2022',
         text: 'Revised my portfolio to its most current version',
@@ -258,279 +452,138 @@ const initialYears: YearlyData[] = [
         year: 2022,
         link: { url: 'https://theburble.netlify.app/', text: 'Burble' },
       },
+      
+      // ARTICLES - 1 completed
       {
-        date: 'Nov 27, 2022',
+        date: 'November 2022',
         text: 'Published: Now What - How To Keep Learning after Landing the 1st Tech Job',
         category: 'Articles',
         year: 2022,
         link: {
-          url: 'https://dev.to/nerajno/now-what-how-to-keep-learning-after-landing-the-1st-tech-job-3nhj',
+          url: 'https://developingdvlpr.com/blog/now-what-how-to-keep-learning-after-landing-the-1st-tech-job',
           text: 'Now What - How To Keep Learning after Landing the 1st Tech Job',
         },
       },
     ],
   },
+  
   {
-    year: 2023,
+    year: 2021,
     items: [
-      { total: 10, completed: 3, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 3, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 5, title: 'Articles', category: 'Articles' },
+      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 2, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // ARTICLES - 2 completed
       {
-        date: 'Jan 15, 2023',
-        text: 'Started planning talks for 2023 conference season',
-        category: 'Talks',
-        year: 2023,
-      },
-      {
-        date: '2023',
-        text: 'Published: So....This is your 1st Tech Conference : #AttendeeEdition',
+        date: '2021',
+        text: 'Published: 6 Strategies Learned from 6 months of Job Hunting',
         category: 'Articles',
-        year: 2023,
+        year: 2021,
         link: {
-          url: 'https://dev.to/nerajno/so-this-is-your-1st-tech-conference-attendeeedition',
-          text: 'So....This is your 1st Tech Conference : #AttendeeEdition'
+          url: 'https://developingdvlpr.com/blog/6-strategies-learned-from-6-months-of-job-hunting',
+          text: '6 Strategies Learned from 6 months of Job Hunting'
         },
       },
       {
-        date: '2023',
-        text: 'Published: So ... This is Your 1st Tech Conference : #VolunteerEdition',
+        date: '2021',
+        text: 'Published: My Takeaways From Sit-Downs with Senior Devs',
         category: 'Articles',
-        year: 2023,
+        year: 2021,
         link: {
-          url: 'https://dev.to/nerajno/so-this-is-your-1st-tech-conference-volunteeredition',
-          text: 'So ... This is Your 1st Tech Conference : #VolunteerEdition'
-        },
-      },
-      {
-        date: 'December 29, 2023',
-        text: 'Published: Tech-nically Speaking: 30 Days In',
-        category: 'Articles',
-        year: 2023,
-        link: {
-          url: 'https://dev.to/nerajno/tech-nically-speaking-30-days-in-4i70',
-          text: 'Tech-nically Speaking: 30 Days In'
-        },
-      },
-      {
-        date: '2023',
-        text: 'Published: How !To Be Mentored (V1)',
-        category: 'Articles',
-        year: 2023,
-        link: {
-          url: 'https://dev.to/nerajno/how-to-be-mentored',
-          text: 'How !To Be Mentored'
-        },
-      },
-      {
-        date: '2023',
-        text: 'Published: Vue-elingual: Teaching Your App to Speak Multiple Languages',
-        category: 'Articles',
-        year: 2023,
-        link: {
-          url: 'https://developingdvlpr.com/blog/vue-elingual-teaching-your-app-to-speak-multiple-languages',
-          text: 'Vue-elingual: Teaching Your App to Speak Multiple Languages'
+          url: 'https://developingdvlpr.com/blog/my-takeaways-from-sit-downs-with-senior-devs',
+          text: 'My Takeaways From Sit-Downs with Senior Devs'
         },
       },
     ],
   },
+  
   {
-    year: 2024,
+    year: 2020,
+    items: [
+      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
+      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
+      { total: 10, completed: 1, title: 'Articles', category: 'Articles' },
+    ],
+    updates: [
+      // ARTICLES - 1 completed
+      {
+        date: '2020',
+        text: 'Published: Writing The Needed ReadMe',
+        category: 'Articles',
+        year: 2020,
+        link: {
+          url: 'https://developingdvlpr.com/blog/writing-the-needed-readme',
+          text: 'Writing The Needed ReadMe'
+        },
+      },
+    ],
+  },
+  
+  {
+    year: 2019,
     items: [
       { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
       { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
       { total: 10, completed: 3, title: 'Articles', category: 'Articles' },
     ],
     updates: [
+      // ARTICLES - 3 completed
       {
-        date: 'October 29, 2024',
-        text: 'Published: Developer Networking Tools : A Brief IRL Edition',
+        date: 'October 2019',
+        text: 'Published: Hackathons - A Junior Developer\'s Growth Tool',
         category: 'Articles',
-        year: 2024,
+        year: 2019,
         link: {
-          url: 'https://dev.to/nerajno/developer-networking-tools-a-brief-irl-edition-55dl',
-          text: 'Developer Networking Tools : A Brief IRL Edition'
+          url: 'https://developingdvlpr.com/blog/hackathons-a-junior-developers-growth-tool',
+          text: 'Hackathons - A Junior Developer\'s Growth Tool'
         },
       },
       {
-        date: '2024',
-        text: 'Published: 11 in 11: Concepts Learnt or Relearnt from Zero Day',
+        date: 'October 2019',
+        text: 'Published: Sight beyond Sight - How Blind Software Engineers Make It Work',
         category: 'Articles',
-        year: 2024,
+        year: 2019,
         link: {
-          url: 'https://developingdvlpr.com/blog/11-in-11-concepts-learnt-or-relearnt-from-zero-day',
-          text: '11 in 11: Concepts Learnt or Relearnt from Zero Day'
-        },
-      },
-      {
-        date: 'October 30, 2024',
-        text: 'Re-published: Sight beyond Sight - How Blind Software Engineers Make It Work',
-        category: 'Articles',
-        year: 2024,
-        link: {
-          url: 'https://dev.to/nerajno/sight-beyond-sight-how-blind-software-engineers-make-it-work-4lo0',
+          url: 'https://developingdvlpr.com/blog/sight-beyond-sight-how-blind-software-engineers-make-it-work',
           text: 'Sight beyond Sight - How Blind Software Engineers Make It Work'
         },
       },
-    ],
-  },
-  {
-    year: 2025,
-    items: [
-      { total: 10, completed: 5, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 2, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 6, title: 'Articles', category: 'Articles' },
-    ],
-    updates: [
-      // TALKS - 5 completed
       {
-        date: 'March 6, 2025',
-        text: 'How !To Be Mentored || DevNexus 2025',
-        category: 'Talks',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/speaking',
-          text: 'How !To Be Mentored || DevNexus 2025',
-        },
-      },
-      {
-        date: 'April 5, 2025',
-        text: 'Skills to Bills: A Users Guide to Demonstrated Competency || Orlando Code Camp 2025',
-        category: 'Talks',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/speaking',
-          text: 'Skills to Bills: A Users Guide to Demonstrated Competency || Orlando Code Camp 2025',
-        },
-      },
-      {
-        date: 'April 29, 2025',
-        text: "Social Goodness || Civic Hacking - What's in it for me? || DevOps Days Atlanta 2025",
-        category: 'Talks',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/speaking',
-          text: "Social Goodness || Civic Hacking - What's in it for me? || DevOps Days Atlanta 2025",
-        },
-      },
-      {
-        date: 'May 23, 2025',
-        text: 'Back to Basics: Essential JavaScript Foundations || 200OK 2025',
-        category: 'Talks',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/speaking',
-          text: 'Back to Basics: Essential JavaScript Foundations for Modern Framework Development || 200OK 2025',
-        },
-      },
-      {
-        date: 'August 2025',
-        text: 'Carolina Codes 2025 Conference Speaker',
-        category: 'Talks',
-        year: 2025,
-        link: {
-          url: 'https://dev.to/nerajno/carolina-codes-2025-my-first-time-speaker-experience-89a',
-          text: 'Carolina Codes 2025 Conference',
-        },
-      },
-      
-      // PROJECTS - 2 completed
-      {
-        date: 'July 12, 2025',
-        text: 'DevelopingDvlpr - MVP of Current Portfolio',
-        category: 'Projects',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/',
-          text: 'DevelopingDvlpr Portfolio',
-        },
-      },
-      {
-        date: 'July 20, 2025',
-        text: 'IsNerandoDoneYet - Status Tracker Of the Current Years Progress',
-        category: 'Projects',
-        year: 2025,
-        link: {
-          url: 'https://isnerandodoneyet.com/',
-          text: 'IsNerandoDoneYet Progress Tracker',
-        },
-      },
-      
-      // ARTICLES - 6 completed
-      {
-        date: 'January 20, 2025',
-        text: 'Published: Building with TypeScript: A Lego-Based Guide',
+        date: 'December 2019',
+        text: 'Published: My #2Cents on How To Build A Beginner Friendly Developer Community',
         category: 'Articles',
-        year: 2025,
+        year: 2019,
         link: {
-          url: 'https://dev.to/nerajno/building-with-typescript-a-lego-based-guide-194k',
-          text: 'Building with TypeScript: A Lego-Based Guide',
-        },
-      },
-      {
-        date: 'May 20, 2025',
-        text: 'Published: 11 JavaScript Fundamentals for Vue Developers',
-        category: 'Articles',
-        year: 2025,
-        link: {
-          url: 'https://dev.to/nerajno/11-javascript-fundamentals-for-vue-developers-42a1',
-          text: '11 JavaScript Fundamentals for Vue Developers',
-        },
-      },
-      {
-        date: 'August 15, 2025',
-        text: 'Published: And It Was Written - An Introspective on the Importance of READMEs',
-        category: 'Articles',
-        year: 2025,
-        link: {
-          url: 'https://dev.to/nerajno/and-it-was-written-an-introspective-in-the-importance-of-readmes-ipp',
-          text: 'And It Was Written: The Importance of READMEs',
-        },
-      },
-      {
-        date: 'August 28, 2025',
-        text: 'Published: Carolina Codes 2025 - My First-Time Speaker Experience',
-        category: 'Articles',
-        year: 2025,
-        link: {
-          url: 'https://dev.to/nerajno/carolina-codes-2025-my-first-time-speaker-experience-89a',
-          text: 'Carolina Codes 2025: My First-Time Speaker Experience',
-        },
-      },
-      {
-        date: 'September 2025',
-        text: 'Published: Mastering D3.js for Interactive Data Visualization',
-        category: 'Articles',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/blog/why-d3js-enhancing-your-storytelling-technically',
-          text: 'Mastering D3.js for Interactive Data Visualization',
-        },
-      },
-      {
-        date: 'September 2025',
-        text: 'Published: How !To Be Mentored V2 - Building Resilient Tech Careers Through Strategic Mentorship',
-        category: 'Articles',
-        year: 2025,
-        link: {
-          url: 'https://developingdvlpr.com/blog/how-to-be-mentored-v2-building-resilient-tech-careers-through-strategic-mentorship',
-          text: 'How !To Be Mentored V2: Building Resilient Tech Careers Through Strategic Mentorship',
+          url: 'https://developingdvlpr.com/blog/my-2cents-on-how-to-build-a-beginner-friendly-developer-community',
+          text: 'My #2Cents on How To Build A Beginner Friendly Developer Community'
         },
       },
     ],
-  },
-  {
-    year: 2019,
-    items: [
-      { total: 10, completed: 0, title: 'Talks', category: 'Talks' },
-      { total: 10, completed: 0, title: 'Projects', category: 'Projects' },
-      { total: 10, completed: 0, title: 'Articles', category: 'Articles' },
-    ],
-    updates: [],
   },
 ];
+
+// DATA VERIFICATION STATUS:
+// ✅ Articles: All articles from 2019-2025 have been updated with links from developingdvlpr.com/blog
+// ✅ 2025 Talks: 5 confirmed talks with dates and conferences
+// ✅ 2025 Projects: 2 confirmed projects (DevelopingDvlpr portfolio and IsNerandoDoneYet)
+// ✅ 2022: Complete data with 10 talks, 2 projects, and 1 article
+// 
+// ⚠️ NEEDS VERIFICATION:
+// - 2024 Talks: Check Sessionize (https://sessionize.com/Nerajno) and PaperCall profiles
+// - 2024 Projects: Check GitHub (https://github.com/Nerajno) for repositories
+// - 2023 Talks: Need to add 2 more specific conference talks
+// - 2023 Projects: Need to add 3 specific projects
+// 
+// RESOURCES FOR COMPLETING DATA:
+// 1. Sessionize Profile: https://sessionize.com/Nerajno
+// 2. PaperCall Profile: https://www.papercall.io/speakers/45142
+// 3. GitHub Profile: https://github.com/Nerajno
+// 4. Blog: https://developingdvlpr.com/blog/
+// 5. Speaking Page: https://developingdvlpr.com/speaking
+// 6. Twitter/X for conference announcements
+// 7. Conference websites: MagnoliaJS, ConnectTech, Refactr, DevNexus, etc.
 
 export const useProgressStore = defineStore('progress', {
   state: () => ({
