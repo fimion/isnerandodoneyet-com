@@ -3,6 +3,7 @@ import { computed } from "vue";
 // import { storeToRefs } from 'pinia';
 import { useProgressStore } from "../store/progress";
 import ProgressCard from "../components/ProgressCard.vue";
+import StatsShowcase from "../components/StatsShowcase.vue";
 import type { ProgressItemWithId } from "../types";
 import { useLocalStorage } from "../composables/useLocalStorage";
 import AccordionWithCheckboxes from "../components/AccordionWithCheckboxes.vue";
@@ -37,7 +38,7 @@ const yearData = computed(() => getYearData(currentYear));
 
 function getSectionItems(category: string) {
   return (
-    yearData.value?.updates.filter((u: any) => u.category === category) || []
+    yearData.value?.updates.filter((u) => u.category === category) || []
   );
 }
 
@@ -74,6 +75,9 @@ function setCheckboxState(id: string, value: boolean) {
     >
       {{ totalProgressPercentage }}%
     </div>
+
+    <!-- Stats Showcase with Data Visualization -->
+    <stats-showcase />
 
     <section class="mb-16 min-h-[70vh]" aria-labelledby="goals-heading">
       <h2
