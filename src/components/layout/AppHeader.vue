@@ -92,7 +92,7 @@ onUnmounted(() => {
             role="menu"
             aria-label="Previous Years">
             <router-link
-              v-for="year in (siteConfig.previousYears as readonly number[])"
+              v-for="year in siteConfig.previousYears"
               :key="year"
               :to="`/year/${year}`"
               @click="closeDropdown"
