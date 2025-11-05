@@ -1,6 +1,7 @@
 // src/composables/useUpdates.ts
-import { ref, reactive } from 'vue'
-import { UpdateRepository, JsonUpdateRepository } from '@/services/updateService'
+import { ref, reactive, readonly } from 'vue'
+import type { UpdateRepository } from '../services/updateService'
+import { JsonUpdateRepository } from '../services/updateService'
 import type { Update } from "../types";
 
 interface UpdateState {
@@ -32,13 +33,14 @@ export function useUpdates(repository: UpdateRepository = new JsonUpdateReposito
   const fetchAll = async () => {
     const result = await handleAsync(() => repository.getAll())
     if (result) updates.value = result
+    else updates.value = []
   }
 
   const fetchById = async (id: string) => {
     return await handleAsync(() => repository.getById(id))
   }
 
-  const fetchByType = async (type: string) => {
+  const fetchByType = async (type: Update['type']) => {
     return await handleAsync(() => repository.getByType(type))
   }
 
@@ -48,8 +50,8 @@ export function useUpdates(repository: UpdateRepository = new JsonUpdateReposito
 
   return {
     updates: readonly(updates),
-    loading: readonly(state.loading),
-    error: readonly(state.error),
+    loading: readonly(ref(state.loading)),
+    error: readonly(ref(state.error)),
     fetchAll,
     fetchById,
     fetchByType,

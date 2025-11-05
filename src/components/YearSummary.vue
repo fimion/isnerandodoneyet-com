@@ -9,7 +9,7 @@
     <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Goals for {{ year }}</h3>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-      <progress-card v-for="(item: ProgressItem, index: number) in yearData.items"
+      <progress-card v-for="(item, index) in yearData.items"
         :key="`${year}-${item.category}-${index}`" :item="item" />
     </div>
 
@@ -19,7 +19,7 @@
       <update-filter :categories="categories" @filter-changed="updateFilters" />
 
       <div class="space-y-4">
-        <progress-update v-for="(update: Update, index: number) in filteredUpdates" :key="`${year}-update-${index}`"
+        <progress-update v-for="(update, index) in filteredUpdates" :key="`${year}-update-${index}`"
           :update="update" />
       </div>
     </div>
@@ -33,7 +33,7 @@ import ProgressBar from './ProgressBar.vue';
 import ProgressUpdate from './ProgressUpdate.vue';
 import UpdateFilter from './UpdateFilter.vue';
 import { useProgressStore } from '../store/progress';
-import type { YearlyData, ProgressItem, Update } from '../types';
+import type { YearlyData, TimelineUpdate } from '../types';
 
 export default defineComponent({
   name: 'YearSummary',
@@ -69,7 +69,7 @@ export default defineComponent({
       return progressStore.getCategoriesForYear(props.year);
     });
 
-    const filteredUpdates = computed<Update[]>(() => {
+    const filteredUpdates = computed<TimelineUpdate[]>(() => {
       if (activeFilters.value.includes('All')) {
         return yearData.value.updates || [];
       }
