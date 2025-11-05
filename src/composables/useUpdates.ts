@@ -40,7 +40,7 @@ export function useUpdates(repository: UpdateRepository = new JsonUpdateReposito
     return await handleAsync(() => repository.getById(id))
   }
 
-  const fetchByType = async (type: any) => {
+  const fetchByType = async (type: Update['type']) => {
     return await handleAsync(() => repository.getByType(type))
   }
 
