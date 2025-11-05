@@ -1,4 +1,4 @@
-nerando-progress-tracker/
+Nerando-progress-tracker/
 ├── public/
 │   └── favicon.ico
 ├── src/
